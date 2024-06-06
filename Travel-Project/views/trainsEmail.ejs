@@ -1,0 +1,192 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link type="text/css" rel="stylesheet" href="/css/template.css" /> -->
+
+    <title>Trains invoice</title>
+    <!-- <style type="text/css">
+      #mail-flights-container {
+        width: 100%;
+        padding: 5px;
+      }
+      #mail-flights-container #mail-flights-content-container {
+        border: 2px solid #bdbcbc;
+        border-radius: 10px;
+        padding: 12px;
+      }
+      #mail-flights-content-inner-container #mail-flights-content-text {
+        font-family: "Roboto";
+        font-weight: 600;
+        color: #000000;
+        font-size: 16px;
+      }
+      #mail-flights-content-text #mail-flights-content-span {
+        font-weight: 500;
+        font-size: 18px;
+      }
+      #mail-flights-content-inner-container
+        #mail-content-provider-name-container {
+        display: flex;
+        align-items: center;
+      }
+      #mail-content-provider-name-container #mail-content-provider-logo {
+        width: 40px;
+        margin-right: 6px;
+      }
+      #mail-content-provider-name-container #mail-content-provider-name {
+        font-family: "Roboto";
+        font-size: 18px;
+        color: #242424;
+        font-weight: 600;
+      }
+      #mail-flights-content-container div #mail-barcode-image {
+        width: 80%;
+        min-width: 100px;
+        max-width: 300px;
+      }
+    </style> -->
+  </head>
+  <body>
+    <div style="width: 100%; padding: 5px">
+      <p>Hi, <%= name %>. Your Booking is Confirmed.</p>
+
+      <div style="width: 100%; padding: 5px">
+        <div
+          style="border: 2px solid #bdbcbc; border-radius: 10px; padding: 12px"
+        >
+          <div class="mail-flights-content-inner-container">
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Order Id:
+              <span style="font-weight: 500; font-size: 18px"><%= id %></span>
+            </p>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Amount Paid:
+              <span style="font-weight: 500; font-size: 18px"
+                ><%= amount %></span
+              >
+            </p>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Departure At:
+              <span style="font-weight: 500; font-size: 18px"
+                ><%= departure %></span
+              >
+            </p>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Destination:
+              <span style="font-weight: 500; font-size: 18px">
+                <%= destination %>
+              </span>
+            </p>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Service Number:
+              <span style="font-weight: 500; font-size: 18px">
+                <%= serviceNumber %>
+              </span>
+            </p>
+          </div>
+          <div id="mail-flights-content-inner-container">
+            <div style="display: flex; align-items: center">
+              <img
+                style="width: 40px; margin-right: 6px"
+                alt="provider logo"
+                src="<%= providerLogo %>"
+              />
+              <h5
+                style="
+                  font-family: Roboto;
+                  font-size: 18px;
+                  color: #242424;
+                  font-weight: 600;
+                "
+              >
+                <%= trainProviderName %>
+              </h5>
+            </div>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Departure Time:
+              <span style="font-weight: 500; font-size: 18px">
+                <%= departureTime %>
+              </span>
+            </p>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Arrival Time:
+              <span style="font-weight: 500; font-size: 18px">
+                <%= arrivalTime %>
+              </span>
+            </p>
+            <p
+              style="
+                font-family: Roboto;
+                font-weight: 600;
+                color: #000000;
+                font-size: 16px;
+              "
+            >
+              Seats:
+              <span style="font-weight: 500; font-size: 18px"
+                ><%= seats %></span
+              >
+            </p>
+          </div>
+          <div>
+            <img
+              src="data:image/png;base64,<%= barcode %>"
+              alt="barcode"
+              style="width: 80%; min-width: 100px; max-width: 300px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
